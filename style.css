@@ -1,0 +1,1629 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Hurme-light"; /*light*/
+  src: url(../font/HurmeGeometricSans2-Light.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Hurme-reg"; /*regular*/
+  src: url(../font/HurmeGeometricSans2.otf);
+}
+
+@font-face {
+  font-family: "Hurme-med"; /*medium*/
+  src: url(../font/HurmeGeometricSans2-SemiBold.otf);
+}
+
+@font-face {
+  font-family: "Hurme-bold"; /*bold*/
+  src: url(../font/HurmeGeometricSans2-Bold.otf);
+}
+
+
+
+ /* GERSON'S CODE STARTS HERE------------------ */
+
+body{
+  min-height: 100vh;
+  font-family: Hurme-reg;
+  position: relative;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 48px;
+  width: 100%;
+  background-color: #4257b2;
+  color: #fff;
+  align-items: center;
+  box-shadow: rgb(0 0 0 / 8%) 0px 0.3125rem 1rem 0px;
+  /* position: -webkit-sticky;
+  top: 0; */
+  position: fixed;
+  
+  z-index: 555;
+}
+
+/* NAVIGATION-LEFT ----------------*/
+.nav-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  padding: 0 8px;
+}
+
+.home {
+  padding: 0 8px;
+  height: 100%;
+  letter-spacing: 0.3px;
+}
+
+.home ul {
+  display: flex;
+
+  height: 100%;
+}
+
+.home ul li:last-child {
+  height: 50%;
+  display: grid;
+  align-self: center;
+}
+
+.home ul li {
+  list-style: none;
+ 
+  display: grid;
+  place-content: center;
+}
+
+.home ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.nav-left svg {
+  width: 78.85px;
+  height: 17.1333px;
+}
+
+.home ul li:first-child {
+  margin: 0 16px;
+  font-family: "Hurme-med";
+  position: relative;
+}
+
+.home ul li:first-child ::before {
+  background: #ffdc62;
+  border-top-left-radius: 0.25rem;
+  height: 0.25rem;
+  width: 39.51px;
+  right: 0;
+  border-top-right-radius: 0.25rem;
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.home ul li:last-child {
+  background-color: #7dd;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.25rem;
+  min-height: 2rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: normal;
+  line-height: 1.4285714285714286;
+  border: none;
+  margin-left: 10px;
+}
+#chevron-down {
+  width: 20px;
+  height: 20px;
+  fill: #4257b2;
+  margin-left: 10px;
+}
+
+.home ul li a:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.home ul li:last-child a {
+  color: #4257b2;
+  letter-spacing: 0.3px;
+}
+
+.home ul li:last-child:hover {
+  background-color: #73d6d6;
+}
+
+/* NAVIGATION-RIGHT ----------------*/
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-right: 8px;
+}
+
+.login {
+  display: flex;
+  gap: 22px;
+  line-height: 0
+}
+
+.login ul {
+  list-style: none;
+}
+
+.login ul li a {
+  text-decoration: none;
+  font-family: Hurme-med;
+  font-size: 12px;
+}
+
+.login ul:first-child a {
+  color: #ffffff99;
+  letter-spacing: 0.3px;
+}
+
+.login ul:first-child a:hover {
+  color: #ffffff;
+}
+
+.login ul:last-child a {
+  color: #4257b2;
+  background: rgb(255, 220, 98);
+  padding: 0.475rem 0.75rem;
+  border-radius: 0.25rem;
+  min-height: 2rem;
+  font-size: 12px; 
+  font-family: Hurme-med;
+  letter-spacing: 0.3px;
+}
+
+.login ul:last-child a:hover {
+  background-color: #f7d55f;
+}
+
+.home {
+  display: none;
+}
+
+.search input {
+  display: none;
+}
+
+#search {
+  fill: #ffffff99;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  transform: translateX(5px);
+}
+
+.search {
+  background-color: #5568ba;
+  align-items: center;
+  border: 0px;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+
+  min-height: 2rem;
+  min-width: 2rem;
+}
+
+/* -------------------MAIN-SECTION --------------*/
+ main {
+  width: 100%;
+  flex: 1 1;
+  background: #3b4c9b;
+} 
+
+.hero-left {
+  width: 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  padding-left: 2rem; 
+  padding-right: 1rem;
+  padding-top: 90px;
+}
+
+.hero-left h1 {
+  font-family: Hurme-bold;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+  font-size: 28px;
+  width: 100%
+}
+
+.hero-left p {
+  padding: 24px 0;
+  margin-bottom: 50px;
+}
+.hero-text .hero-btn {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  background-color: #3ccfcf;
+  font-family: Hurme-med;
+  border-radius: 0.25rem;
+  letter-spacing: 0.0375rem;
+  padding: 1.20rem 1.35rem;
+  font-size: 1rem;
+}
+
+.hero-text .hero-btn:hover {
+  background: #28a7a7;
+}
+
+.hero-left li {
+  list-style: none;
+}
+
+.small {
+  margin-top: 48px;
+  margin-bottom: 1.8rem;
+}
+
+.small ul {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 2rem; 
+} 
+
+.small ul li a {
+  text-decoration: none;
+  color: #3ccfcf;
+  font-family: Hurme-med;
+  letter-spacing: 0.6px;
+  font-size: 16px;
+}
+
+/*--------hero-right-------------------*/
+
+/*BACKGROUND - IMAGE  SLIDER*/
+
+.image2,
+.image3 {
+  display: none;
+}
+
+.image1 {
+  opacity: 0;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+ 
+
+
+  /* new */
+  transition: 100ms;
+  animation-name: animate;
+  animation-direction: alternate-reverse;
+  animation-duration: 15s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    background: url(images/hero-image1.png);
+    background-size: cover;
+  }
+  40% {
+    background: url(images/hero-image2.png);
+    background-size: cover;
+  }
+
+  70% {
+    background: url(images/hero-image3.png);
+    background-size: cover;
+  }
+
+  100% {
+    background: url(images/hero-image1.png);
+    background-size: cover;
+  }
+}
+
+/* new */
+
+/*BACKGROUND - IMAGE SLIDER ENDS Here*/
+
+/* text-slider */
+
+.image-text p:before {
+  content: "";
+  animation: text-change infinite 15s;
+  transition: 2s;
+  animation-direction: forwards;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes text-change {
+  0% {
+    content: '"Ill sleep when exams are over" students ';
+  }
+  40% {
+    content: '"Get through exams to get to vacation" students';
+  }
+  70% {
+    content: '"Tonight I work, so tomorrow I can go places" students';
+  }
+
+  100% {
+    content: '"Ill sleep when exams are over" students ';
+  }
+}
+
+
+
+/* text-slider ends here */
+
+.hero-image img {
+  width: 100%;
+  max-height: 515px;
+}
+
+.hero-right {
+  background-color: #4257b2;
+  color: #fff;
+  width: 100%;
+}
+
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+
+}
+
+.image-text {
+
+   padding: 1rem 0 3.3rem 0; 
+}
+
+.image-text h4 {
+  font-size: 14px;
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+
+
+.image-text p {
+  font-size: 16px;
+  text-align: center;
+  font-family: Hurme-reg;
+}
+
+/* ---------------percent-section ---------------*/
+.percent {
+  text-align: center;
+  padding: 138px 0;
+  margin: 0 10px;
+  color: #303545;
+}
+
+.yellow h5 {
+  font-family: Hurme-bold;
+  font-size: 2rem;
+  background: url(images/scribble.6c75e80726e3401.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 43px;
+}
+
+.percent h6 {
+  font-size: 24px;
+  font-family: Hurme-bold;
+}
+
+/* GERSON'S CODE ENDS HERE------------------  */
+
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+
+/* ALYSSA'S CODE STARTS HERE------------------ */
+
+.giveGoContainer{
+    margin: 22px;
+}
+.giveGoBox1 h3{
+    padding-left: 12px;
+    padding-bottom: 22px;
+    font-size: 20px;
+    font-family: Hurme-bold;
+    line-height: 32px;
+    color: #303545;
+}
+.giveGoBox2{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+.giveGosubBox1, .giveGosubBox2, .giveGosubBox3, .giveGosubBox4, .giveGosubBox5, .giveGosubBox6{
+    height: 100px;
+    width: 287px;
+    display: flex;
+    align-items: center;
+    background-color: #ffedab;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px #eeeded;
+    cursor: pointer;
+}
+.giveGosubBox4, .giveGosubBox5, .giveGosubBox6{
+    display: none;
+}
+.giveGoBox2 span{
+    font-size: 18px;
+    font-family: Hurme-med;
+    line-height: 23px;
+    color: #303545;
+    text-align: left;
+    padding-left: 32px;
+}
+.giveGosubBox2 span{
+    text-align: right;
+}
+.giveGosubBox1:hover, .giveGosubBox2:hover, .giveGosubBox3:hover, .giveGosubBox4:hover, .giveGosubBox5:hover, .giveGosubBox6:hover{
+    box-shadow: 1px 1px 5px 5px #f0f0f0;
+    transition: 0.3s;
+}
+.giveGosubBox1{
+    background-image: url("images/languages.21148dabfd1959b.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.giveGosubBox2{
+    background-image: url("images/science.8c7a201e1504c94.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.giveGosubBox3{
+    background-image: url("images/arts_and_humanities.26f67789bce036d.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.giveGosubBox4{
+    background-image: url("images/math.ef0169dbbcaeb90.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.giveGosubBox5{
+    background-image: url("images/social_science.5f96b82bbc5927a.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.giveGosubBox6{
+    background-image: url("images/other.278d18ec6a39361.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.nextWinContainer, .getDoneContainer, .bringContainer{
+    margin: 16px;
+}
+.nextWinBox1 img, .getDoneBox1 img, .bringBox1 img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 3.4375rem;
+}
+.nextWinBox1 img{
+    margin-top: 119px;
+}
+.bringBox1, .getDoneBox1{
+    width: 100%
+}
+.nextWinBox2 h3, .getDoneBox2 h3, .bringBox2 h3{
+    font-size: 20px;
+    font-family: Hurme-bold;
+    line-height: 28px;
+    color: #303545;
+}
+.bringBox-container h3{
+  line-height: 1.333;
+}
+.bringBox2{
+  width: 100%;
+  margin: 0 auto;
+}
+.bringBox2 p{
+    margin-bottom: 84px;
+}
+.nextWinBox2 p, .getDoneBox2 p, .bringBox2 p{
+    padding: 44px 0px 44px 0px;
+    font-family: Hurme-reg;
+    font-size: 16px;
+    line-height: 22px;
+    color: #303545;
+}
+.quizletSlideTextBox h3::before{
+    content: url(https://assets.quizlet.com/a/j/dist/i/prismic/quotes-open.76da8581ea3adc0.svg) "\A";
+    white-space: pre;
+}
+.quizletSlideTextBox h3::after{
+    content: "\A" url(https://assets.quizlet.com/a/j/dist/i/prismic/quotes-close.f05dbfc1b568217.svg);
+    white-space: pre;
+}
+/* .quizletSlideTextBox{
+  padding: 100px 0;
+} */
+.quizletSlideTextBox h3{
+    padding: 0 16px;
+    font-size: 26px;
+    font-family: Hurme-bold;
+    line-height: 40px;
+    color: #303545;
+}
+.quizletSlideTextBox p{
+    padding: 24px 16px 55px 16px;
+    font-size: 16px;
+    font-family: Hurme-med;
+    line-height: 26px;
+    color: #a9a9a9;
+}
+
+/* ALYSSA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ /* AYA'S CODE STARTS HERE------------------ */
+
+
+ul li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: #4257b2;
+    padding: 40px 0px;
+}
+
+hr.aya-divider {
+    border: none;
+    background-color: #f6f7fb;
+    opacity: .2;
+    height: .125rem;
+    margin: 0 40px;
+}
+
+#aya-section:last-of-type {
+    padding: 30px 0px;
+}
+
+#aya-section {
+    text-align: center;
+}
+
+#aya-h3, #aya-h5 {
+    font-family: 'Hurme-bold', sans-serif;
+    color: #303545;
+    letter-spacing: .5px;
+}
+
+#aya-h3 {
+    font-size: 1.25rem;
+}
+
+#aya-a, #aya-p, #aya-button {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Hurme-light', sans-serif;
+}
+
+#aya-button {
+    font-family: 'Hurme-med';
+}
+
+#aya-button:hover {
+  background-color: #28a7a7;
+}
+
+#aya-p {
+    color: #303545;
+    padding: 43px 0;
+}
+
+#shield {
+  width: 17px;
+  height: 15px;
+  transform: translateY(2px);
+}
+
+.aya-text-wrapper {
+    padding: 24px 0;
+}
+
+.aya-text-wrapper button {
+    background-color: #3ccfcf;
+    padding: 0 30px;
+    border: none;
+    border-radius: .25rem;
+    -webkit-border-radius: .25rem;
+    -moz-border-radius: .25rem;
+    -ms-border-radius: .25rem;
+    -o-border-radius: .25rem;
+    height: 3.5rem;
+    color: white;
+    font-family: 'Hurme-med', sans-serif;
+}
+
+.aya-flex-container, 
+.aya-btn-container, 
+.aya-socialmedia-icons {
+    display: flex;
+}
+
+.aya-flex-container {
+    flex-direction: column;
+    background-color: #3ccfcf20;
+   
+}
+
+.aya-img-container img{
+    width: 100%;
+    height: 378px;
+    object-fit: cover;
+}
+
+.aya-text-container {
+    margin: 0 2rem 32px;
+    padding: 32px 0;
+    line-height: 1.5em;
+    text-align: left;
+}
+
+.aya-text-container #aya-h5 {
+    font-size: 1rem;
+}
+
+.aya-text-container #aya-a {
+    color: #3ccfcf;
+    font-family: 'Hurme-med',sans-serif;
+    letter-spacing: 1px;
+}
+
+.aya-btn-container {
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.aya-btn-container #aya-img {
+    width: 154px;
+    margin-right: 8px;
+}
+
+.aya-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    margin: 0 20px;
+    padding: 0 16px;
+    margin-bottom: 84px;
+}
+
+.aya-grid-container ul li a {
+    color: white;
+    line-height: 1.5em;
+    font-size: 12px;
+    text-decoration: none;
+    letter-spacing: .8px;
+}
+
+.aya-grid-item ul li a:hover {
+  color: #88A3D9;
+}
+
+.aya-grid-container ul li:first-of-type {
+    line-height: 3.5em;
+    color: white;
+    padding-top: 20px;
+}
+
+.aya-grid-container .aya-label {
+    font-size: 15px;
+    font-family: 'Hurme-bold';
+}
+
+.grid-item5 select {
+    border: none;
+    background: none;
+    color: white;
+    width: 170px;
+    font-family: 'Hurme-med', sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+
+.grid-item5 option{
+    background-color: white;
+    color: #303545;
+}
+
+.aya-socialmedia-icons {
+    margin: 25px 0 0;
+    padding: 0 38px;
+}
+
+.aya-media-items {
+    margin-right: 35px;
+}
+
+.aya-media-items:first-child {
+    padding-left: 10px;
+}
+
+.aya-media-items:last-child {
+    flex: 2;
+    text-align: right;
+    margin-right: 0;
+    color: white;
+    font-family: 'Hurme-reg', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.fa-twitter, 
+.fa-facebook-f, 
+.fa-instagram, 
+.fa-youtube {
+    color: #ffffff90;
+}
+
+.copyright {
+  padding-right: 2px;
+}
+
+/* AYA'S CODE ENDS HERE------------------  */
+
+
+/* MEDIA QUERIES STARTS HERE--------------------- */
+/* MEDIA QUERIES STARTS HERE--------------------- */
+/* MEDIA QUERIES STARTS HERE--------------------- */
+/* MEDIA QUERIES STARTS HERE--------------------- */
+/* MEDIA QUERIES STARTS HERE--------------------- */
+
+
+/* MEDIA-ONE------------------------------------------------------ */
+
+@media (min-width: 576px) { 
+    
+
+  /* GERSON'S CODE STARTS HERE------------------ */
+
+    /* ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here------- */
+ 
+
+/* GERSON'S CODE ENDS HERE------------------  */
+
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+
+/* ALYSSA'S CODE STARTS HERE------------------ */
+/* 
+.giveGoContainer {
+    font-size: 24px;
+}
+.giveGosubBox1, .giveGosubBox2, .giveGosubBox3, .giveGosubBox4, .giveGosubBox5, .giveGosubBox6{
+    width: 287px;
+    margin: 9px;
+    padding: 0;
+}
+.nextWinContainer, .getDoneContainer {
+    margin: 40px 20px;
+}
+
+.quizletSlideTextBox h3::before{
+    content: url(https://assets.quizlet.com/a/j/dist/i/prismic/quotes-open.76da8581ea3adc0.svg);
+}
+.quizletSlideTextBox h3::after{
+    content: url(https://assets.quizlet.com/a/j/dist/i/prismic/quotes-close.f05dbfc1b568217.svg);
+}
+.quizletSlideTextBox{
+    text-align: left;
+}
+.quizletSlideTextBox h3{
+    padding: 30px 16px 0px 16px;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.bringContainer {
+  margin: 0 20px;
+}
+
+.bringBox2 p {
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+
+.giveGoBox1 h3, .bringBox2 h3, .nextWinContainer h3, .getDoneContainer h3 {
+  font-size: 20px;
+}
+
+.giveGoBox1 h3 {
+  margin-bottom: 10px;
+   padding-left: 60px; 
+}
+
+.nextWinBox1 img {
+  width: 544px;
+  height: 544px;
+  /* transform: translateX(-25px);
+}
+
+.nextWinContainer p, .getDoneContainer p {
+  font-size: 16px;
+}
+
+.getDoneBox1 img{
+  width: 100%
+} */
+
+/* ALYSSA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ /* AYA'S CODE STARTS HERE------------------ */
+
+   /* ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here-------
+    ---- (min-width: 576px) code here------- */
+
+/* AYA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ }
+
+/* MEDIA-TWO----------------------------------------------------- */
+@media (min-width: 768px) { 
+ 
+
+    /* GERSON'S CODE STARTS HERE------------------ */
+
+  #home-copy {
+    display: block;
+  }
+
+  #chevron-down {
+    margin-left: 0;
+  }
+
+  nav {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .nav-left svg {
+    width: 95px;
+    height: 20.63px;
+  }
+
+
+.login ul li a {
+ 
+  font-size: 14px;
+}
+
+  .login ul:last-child a {
+  font-size: 14px; 
+  }
+
+  main {
+    display: flex;
+    width: 100%;
+    flex: 1 1;
+  }
+
+  .hero-left a {
+    display: block;
+  }
+
+  .hero-image img {
+    width: 100%;
+  }
+  .hero-right {
+    background-color: #4257b2;
+    color: #fff;
+  }
+
+  
+
+  .hero-text h1 {
+    font-size: 22px;
+    line-height: 28px;
+    font-family: Hurme-med;
+    padding-right: 20px;
+  }
+
+  .img-text h4 {
+    font-size: 17px;
+  }
+  
+
+   .image-text p{
+     font-size: 18px;
+    
+    
+   }
+  
+
+  .flex-cont {
+    max-width: 450px;
+  }
+
+
+  .percent-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .yellow h5 {
+    transform: translateY(-45px);
+  }
+
+   .percent h6 {
+  font-size: 32px;
+ 
+    } 
+
+.percent{
+ margin: 90px 0;
+ padding: 40px
+}
+
+  .hero-text .hero-btn {
+    padding: 1.35rem 1.6rem;
+    font-size: 20px;
+  }
+
+  .small ul li a {
+    font-size: 20px;
+    letter-spacing: .8px;
+  }
+
+  .image-text p:before {
+    font-size: 12px;
+  }
+
+  .image-text h4 {
+    font-size: 17px;
+  }
+
+
+.image-text p::before {
+    font-size: 18px;
+  }
+  .hero-left h1 { 
+  width: 100%
+  }
+
+  .hero-left p {
+  font-size: 20px;
+  }
+
+  .small {
+  margin-bottom: 3rem;
+
+}
+
+.small ul {
+  
+  padding: 0;
+}
+
+ .hero-text h1 {
+   letter-spacing: 0;
+    font-family: Hurme-bold;
+    font-size: 44px;
+    line-height: 56px;
+   
+  }
+
+
+.bottom-hero {
+  padding: 0;
+}
+
+.hero-text p {
+  line-height: 28px;
+}
+
+/* GERSON'S CODE ENDS HERE------------------  */
+
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+
+/* ALYSSA'S CODE STARTS HERE------------------ */
+
+.bringContainer{
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2.5rem;
+}
+.giveGoBox1{
+  margin-left: 5.375rem;
+}
+.giveGoBox1 h3{
+  font-size: 24px;
+}
+.giveGoBox2{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 22px;
+}
+.giveGoBox2 span{
+  font-size: 24px;
+}
+.giveGosubBox4, .giveGosubBox5, .giveGosubBox6{
+    display: block;
+}
+.giveGosubBox1, .giveGosubBox2, .giveGosubBox3, .giveGosubBox4, .giveGosubBox5, .giveGosubBox6{
+    width: 296px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.nextWinContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.getDoneContainer{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.bringBox-container p{
+  line-height: 1.4;
+}
+.bringContainer h3, .nextWinContainer h3, .getDoneContainer h3{
+  font-size: 24px;
+}
+.bringContainer p,  .nextWinContainer p, .getDoneContainer p{
+  font-size: 20px;
+}
+.nextWinContainer img, .getDoneContainer img, .bringContainer img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.nextWinBox1 img, .getDoneBox1 img, .bringBox1 img{
+  margin-bottom: 0;
+}
+.nextWinBox2{
+    padding-left: 85px;
+}
+.getDoneBox2{
+    padding-right: 86px;
+}
+.quizletSlideTextBox h3::before{
+    content: url(https://assets.quizlet.com/a/j/dist/i/prismic/quotes-open.76da8581ea3adc0.svg);
+    white-space: pre;
+}
+.quizletSlideTextBox h3::after{
+    content: url(https://assets.quizlet.com/a/j/dist/i/prismic/quotes-close.f05dbfc1b568217.svg);
+    white-space: pre;
+}
+.quizletSlideTextContainer{
+  text-align: center;
+}
+/* ALYSSA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ /* AYA'S CODE STARTS HERE------------------ */
+footer {
+  padding: 60px 0 32px;
+}
+
+
+#aya-h3 {
+    font-size: 24px;
+    line-height: 32px;
+}
+
+#aya-button {
+    font-size: 14px;
+    padding: 0 24px;
+    height: 45px;
+}
+
+#aya-p {
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 43px;
+}
+
+.aya-text-wrapper {
+  padding-bottom: 28px;
+}
+
+.aya-flex-container {
+    flex-direction: row-reverse;
+    background-color: #3ccfcf20;
+}
+
+.aya-img-container, .aya-text-container {
+    width: 50%;
+    margin: 0;
+}
+
+.aya-btn-container {
+  padding-top: 2px;
+}
+
+.aya-text-container {
+    padding: 0 32px;
+    margin-top: 4px;   
+}
+
+.aya-text-container #aya-a {
+    font-size: 14px;
+}
+
+.aya-grid-container {
+    grid-template-columns: repeat(4, 25%);
+    padding: 0 40px;
+    margin: 0 0 84px;
+}
+
+.aya-grid-container .aya-label {
+    font-size: 16px;
+}
+
+.aya-grid-container ul li a {
+    font-size: 14px;
+    line-height: 2em;
+    font-family: 'Hurme-light';
+}
+
+.aya-grid-item select {
+    font-size: 14px;
+    font-family: 'Hurme-med';
+}
+
+.aya-media-items:last-child {
+    font-size: 16px;   
+}
+
+/* AYA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ }
+
+/* MEDIA-THREE----------------------------------------------------- */
+@media (min-width: 992px) { 
+    /* GERSON'S CODE STARTS HERE------------------ */
+#home-copy {
+    display: none;
+  }
+
+  #chevron-down {
+    margin-left: 10px;
+  }
+
+  #home-max {
+    display: block;
+  }
+    .image-text {
+     margin: 0; 
+}
+
+.giveGoBox1 h3 { 
+   padding-left: 0px; 
+}
+
+
+
+
+.hero-right {
+  padding-bottom: 2.5em;
+}
+
+
+
+/* GERSON'S CODE ENDS HERE------------------  */
+
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+
+/* ALYSSA'S CODE STARTS HERE------------------ */
+.bringContainer img{
+  height: auto;
+}
+.bringContainer h3, .nextWinContainer h3, .getDoneContainer h3{
+  font-size: 24px;
+  line-height: 32px;
+  padding: 0;
+  margin: 0;
+}
+.bringContainer p, .nextWinContainer p, .getDoneContainer p{
+  font-size: 20px;
+  line-height: 28px;
+  padding: 0;
+  margin: 0;
+}
+.bringBox-container, .getDoneBox-container, .nextWinBox-container{
+  padding: 0 10px;
+}
+.bringBox-container{
+  max-width: 404.71px;
+}
+.giveGoContainer{
+  margin-bottom: 95px;
+}
+.giveGoBox1{
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0;
+}
+.giveGoBox2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 990px;
+}
+.giveGoBox2 span{
+  font-size: 24px;
+  line-height: 31px;
+}
+.giveGosubBox1, .giveGosubBox2, .giveGosubBox3, .giveGosubBox4, .giveGosubBox5, .giveGosubBox6{
+  width: 309px;
+  height: 140px;
+}
+.bringContainer, .nextWinContainer, .getDoneContainer, .quizletSlideTextContainer{
+  padding: 0 60px;
+}
+.bringContainer h3, .nextWinContainer h3, .getDoneContainer h3{
+  padding-bottom: 44px;
+}
+.quizletSlideTextContainer{
+  padding: 60px;
+  line-height: 38px;
+}
+.quizletSlideTextContainer h3{
+  font-size: 30px;
+}
+/* ALYSSA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ /* AYA'S CODE STARTS HERE------------------ */
+#aya-section:last-of-type {
+    padding: 3rem 0px;
+}
+
+#aya-h3 {
+    margin-bottom: 24px;
+}
+
+#aya-button {
+    font-size: 20px;
+    height: 65px;
+}
+
+.aya-text-wrapper {
+    padding: 48px 0;
+}
+
+.aya-text-container {
+    padding: 25px 30px 25px 50px;
+    height: 430px;
+}
+
+.aya-text-container #aya-h3 {
+    margin-bottom: 0;
+}
+
+.aya-text-container #aya-p {
+    margin-bottom: 40px;
+    
+}
+
+.aya-text-container #aya-a, #aya-p {
+    font-size: 20px;
+}
+
+.aya-img-container img{
+    height: 430px;
+}
+
+.aya-grid-item select {
+  font-size: 14px;
+}
+
+.aya-socialmedia-icons {
+  padding: 0 40px 5px;
+}
+
+.aya-divider {
+  margin: 0 30px;
+}
+
+/* AYA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ }
+
+/* MEDIA-FOUR---------------- */
+@media (min-width: 1200px) { 
+    /* GERSON'S CODE STARTS HERE------------------ */
+ input::placeholder {
+    color: #ffffff75;
+  }
+
+  #gsearch {
+    background: transparent;
+    border: 0px;
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    outline: none;
+    width: 100%;
+    letter-spacing: 0.5px;
+  }
+
+  #search {
+    fill: #ffffff99;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .search {
+    padding: 5px;
+    background-color: #5568ba;
+    align-items: center;
+    border: 0px;
+    border-radius: 0.5rem;
+    color: var(--indigo-200);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    min-height: 2rem;
+    min-width: 15rem;
+    padding: 0px 0.875rem;
+  }
+  .search input {
+    display: block;
+    margin-left: 5px;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  
+/* GERSON'S CODE ENDS HERE------------------  */
+
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+
+/* ALYSSA'S CODE STARTS HERE------------------ */
+.giveGoContainer{
+    margin: 60px 100px 95px 100px;
+    padding: 0px;
+}
+.bringContainer, .nextWinContainer, .getDoneContainer, .quizletSlideTextContainer{
+    margin: 0 100px;
+    padding: 0px;
+}
+.giveGoBox2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 990px;
+}
+.quizletSlideTextContainer{
+  padding-top: 100px;
+}
+/* ALYSSA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ /* AYA'S CODE STARTS HERE------------------ */
+footer {
+  padding: 50px 0 32px;
+}
+
+.aya-text-container {
+    padding: 70px 64px;
+    height: 530px;
+    margin-top: 0;
+}
+
+.aya-text-container #aya-p {
+    margin-bottom: 30px;
+    padding: 50px 0;
+}
+
+.aya-img-container img {
+    height: 530px;
+}
+
+.aya-grid-container {
+    grid-template-columns: repeat(5, 20%);
+    padding-top: 0;
+    padding-bottom: 80px;
+    margin: 0;
+}
+
+.aya-grid-container ul li:first-of-type {
+  padding-top: 0;
+}
+
+  
+
+/* AYA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+}
+
+/* MEDIA-FIVE---------------- */
+@media (min-width: 1400px) { 
+    /* GERSON'S CODE STARTS HERE------------------ */
+
+  .hero-image img {
+    width: 100%;
+    max-height: 600px;
+  
+  }
+
+
+/* GERSON'S CODE ENDS HERE------------------  */
+
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+
+/* ALYSSA'S CODE STARTS HERE------------------ */
+
+.bringContainer, .nextWinContainer, .getDoneContainer, .quizletSlideTextContainer{
+    margin: 0 15%;
+    padding: 0px;
+}
+.quizletSlideTextContainer{
+  padding-top: 80px;
+}
+/* ALYSSA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+ /* AYA'S CODE STARTS HERE------------------ */
+  hr.aya-divider {
+    margin: 0 90px;
+  }
+
+  #aya-button {
+    padding: 0 24px;
+    height: 65px;
+    font-family: 'Hurme-med';
+  }
+
+  .aya-text-container {
+    /* margin-top: 1px; */
+    padding-top: 90px;
+  }
+
+  .aya-text-container #aya-a{
+    font-size: 20px;
+  }
+
+  .aya-btn-container a {
+    margin-right: 8px;
+  }
+
+  .aya-grid-item .aya-label {
+      font-size: 16px;
+  }
+
+  .aya-grid-container {
+    padding: 0 40px;
+    margin: 0 50px 84px;
+  }
+
+  .aya-grid-container ul li a {
+    font-size: 14px;
+  }
+
+  .aya-socialmedia-icons {
+    padding: 0 90px 7px;
+  }
+
+/* AYA'S CODE ENDS HERE------------------  */
+
+/* ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************
+   ************* THIS IS A CODE DIVIDER ************ */
+
+}
+
